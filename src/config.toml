@@ -1,5 +1,28 @@
-baseURL = "http://example.org/"
+baseURL = "https://blog.ngot.me/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+DefaultContentLanguage = "cn"
+title = "Henry's blog"
 publishDir = "../docs"
 theme = "yinyang"
+
+[params]
+disqus = "ngot"
+extraHead = ''
+
+[[params.socials]]
+name = "About Me"
+link = "https://ngot.me"
+
+[languages]
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 1
+  [languages.cn]
+    contentDir = "content/cn"
+    languageName = "Chinese"
+    weight = 2
+
+[author]
+  name = "Henry Zhuang"
+  homepage = "https://ngot.me/"

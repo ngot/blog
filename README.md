@@ -28,3 +28,11 @@ hugo --cleanDestinationDir --minify  -s ./src
 ## Deployment
 
 Don't forget about the CNAME file under the `docs` folder.
+
+## Themes
+
+Add themes
+
+```shell
+git submodule add $repo src/themes/$theme_name
+```
