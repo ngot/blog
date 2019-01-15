@@ -1,0 +1,18 @@
+before_install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
+  - rm -f hugo*.deb
+  - hugo version
+
+script:
+  - hugo --cleanDestinationDir --minify  -s ./src
+  - cp CNAME ./docs
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  local-dir: ./docs
+  on:
+    branch: master
