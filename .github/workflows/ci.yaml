@@ -13,8 +13,7 @@ jobs:
           hugo-version: '0.53'
 
       - name: Build ⚙️
-        run: hugo --cleanDestinationDir --minify  -s ./src
-        run: cp CNAME ./docs
+        run: hugo --cleanDestinationDir --minify  -s ./src && 
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.7
